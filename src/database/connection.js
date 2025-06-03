@@ -6,13 +6,14 @@ const { Pool } = pkg;
 config()
 
 const pool = new Pool({
-    host: process.env.POSTGRES_HOST,
-    port: process.env.POSTGRES_PORT,
-    database: process.env.POSTGRES_DB,
-    user: process.env.POSTGRES_USER,
-    password: process.env.POSTGRES_PASSWORD,
+    host: process.env.POSTGRES_HOST || "localhost",
+    port: process.env.POSTGRES_PORT || 5432,
+    database: process.env.POSTGRES_DB || "poke-db",
+    user: process.env.POSTGRES_USER || "postgres",
+    password: process.env.POSTGRES_PASSWORD || "postgres",
     max: 15
 })
+
 
 export const query = async (text, params = []) => {
     try {
