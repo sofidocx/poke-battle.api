@@ -4,10 +4,11 @@ import pkg from "pg";
 const { Pool } = pkg;
 
 config()
+console.log(process.env.POSTGRES_HOST, process.env.POSTGRES_PORT, process.env.POSTGRES_DB, process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD)
 
 const pool = new Pool({
     host: process.env.POSTGRES_HOST || "localhost",
-    port: process.env.POSTGRES_PORT || 5432,
+    port: process.env.POSTGRES_PORT || 5430,
     database: process.env.POSTGRES_DB || "poke-db",
     user: process.env.POSTGRES_USER || "postgres",
     password: process.env.POSTGRES_PASSWORD || "postgres",

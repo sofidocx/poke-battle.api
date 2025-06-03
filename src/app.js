@@ -4,6 +4,7 @@ import express from "express";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
 import { swaggerConfig } from "./docs/swagger.config.js";
+import { testConnection } from "./database/connection.js";
 
 
 config();
@@ -34,6 +35,7 @@ app.use((req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
+    testConnection()
     console.log(`Servidor funcionando na porta ${PORT}`)
     console.log(`Documentação: http://localhost:${PORT}/docs`)
 })
