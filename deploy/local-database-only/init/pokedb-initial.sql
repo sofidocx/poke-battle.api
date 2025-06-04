@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS pokemon (
     id SERIAL PRIMARY KEY,
-    type VARCHAR(50) NOT NULL,
-    trainer VARCHAR(100) NOT NULL,
-    level INTEGER, 
+    tipo VARCHAR(50) NOT NULL,
+    treinador VARCHAR(100) NOT NULL,
+    nivel INTEGER, 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )

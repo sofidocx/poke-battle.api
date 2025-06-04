@@ -28,10 +28,10 @@ export const pokemonSchema = {
 
 export const pokemonCreateSchema = {
     type: "object",
-    required: ["type", "treinador"],
+    required: ["tipo", "treinador"],
     properties: {
-        tipo: pokemonSchema.properties.type,
-        treinador: pokemonSchema.properties.trainer
+        tipo: pokemonSchema.properties.tipo,
+        treinador: pokemonSchema.properties.treinador
     }
 };
 
@@ -39,7 +39,7 @@ export const pokemonUpdateSchema = {
     type: "object",
     required: ["treinador"],
     properties: {
-        treinador: pokemonSchema.properties.trainer
+        treinador: pokemonSchema.properties.treinador
     }
 };
 
