@@ -41,7 +41,7 @@ http://localhost:3000/docs
 - GET/pokemons - lista todos os pokemons 
 - GET/pokemons/:id - busca um pokemon por ID 
 - PUT/pokemons/:id - atualiza o treinador de um pokemon 
-- DELETE/pokemon/:id - deleta um pokemon 
+- DELETE/pokemons/:id - deleta um pokemon 
 
 Só aceita tipos: pikachu, charizar, mewto 
 Todo pokemon irá iniciar nível 1 
