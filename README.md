@@ -37,24 +37,23 @@ http://localhost:3000/docs
 
 ## Endpoints da API 
 
-POST/pokemons - cria um novo pokemon 
-GET/pokemons - lista todos os pokemons 
-GET/pokemons/:id - busca um pokemon por ID 
-PUT/pokemons/:id - atualiza o treinador de um pokemon 
-DELETE/pokemon/:id - deleta um pokemon 
+- POST/pokemons - cria um novo pokemon 
+- GET/pokemons - lista todos os pokemons 
+- GET/pokemons/:id - busca um pokemon por ID 
+- PUT/pokemons/:id - atualiza o treinador de um pokemon 
+- DELETE/pokemon/:id - deleta um pokemon 
 
---- 
 Só aceita tipos: pikachu, charizar, mewto 
 Todo pokemon irá iniciar nível 1 
----
 
-POST/batalhar/:pokemonAId/:pokemonBId - realiza uma batalha entre pokemons 
 
---- 
+- POST/batalhar/:pokemonAId/:pokemonBId - realiza uma batalha entre pokemons 
+
+
 A chance de vitória é proporcional ao nível de cada pokemon 
 Vencedor: +1 nível 
 Perdedor: -1 nível (caso perdedor chegue no nível 0, deve ser deletado do banco)
----
+
 
 ## Observação 
 Este projeto foi desenvolvido como parte de um desafio técnico, apllicando boas práticas de desenvolvimento, arquitetura em camadas e implementação de regra de negócios. 
