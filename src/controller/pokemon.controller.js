@@ -20,4 +20,34 @@ export class PokemonController {
 
     return res.status(200).json(newPokemon);
   }
+
+  async alterar(req, res) {
+    const { treinador } = req.body;
+
+    if (!treinador) {
+      throw new RequiredFieldsException(["treinador"]);
+    }
+
+    await this.pokemonService.updateTreinador(req.params.id, treinador);
+
+    return res.status(204).send();
+  }
+
+  async deletar(req, res) {
+    await this.pokemonService.delete(req.params.id);
+
+    return res.status(204).send();
+  }
+
+  async carregar(req, res) {
+    const pokemonEncontrado = await this.pokemonService.getById(req.params.id);
+
+    return res.status(200).json(pokemonEncontrado)
+  }
+
+  async listar(req, res){
+    const pokemons = await this.pokemonService.getAll();
+
+    return res.status(200).json(pokemons)    
+  }
 }

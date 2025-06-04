@@ -36,7 +36,7 @@ export class PokemonService {
         this.validateId(id);
         this.validateTreinador(novoTreinador);
 
-        const pokemonAtualizado = await this.pokemonRepository.updateTrainer(id, treinador)
+        const pokemonAtualizado = await this.pokemonRepository.updateTrainer(id, novoTreinador)
 
         return pokemonAtualizado;
     }
