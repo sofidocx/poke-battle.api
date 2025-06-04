@@ -29,7 +29,7 @@ export class PokemonService {
 
         const newPokemon = await this.pokemonRepository.create(pokemonData);
 
-        return newPokemon;
+        return newPokemon;  
     }
 
     async updateTreinador(id, novoTreinador) {
@@ -50,7 +50,7 @@ export class PokemonService {
     }
 
     validatePokemonType(type) {
-        if (!tipo || typeof type !== "string") {
+        if (!type || typeof type !== "string") {
             throw new ValidationException(
                 "Para validar o tipo do pokemon, é necessario que seja uma string"
             );

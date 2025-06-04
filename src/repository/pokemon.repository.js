@@ -48,6 +48,7 @@ export class PokemonRepository {
             return result.rows[0];
         } catch (error) {
             throw new DatabaseException("Inserir um pokemon", error);
+            console.log(error)
         }
     }
 

@@ -55,5 +55,5 @@ export const swaggerConfig = {
             }
         }
     },
-    apis: []
+    apis: ['./src/routes/*.js']
 };

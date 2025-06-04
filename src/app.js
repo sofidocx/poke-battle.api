@@ -5,6 +5,7 @@ import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
 import { swaggerConfig } from "./docs/swagger.config.js";
 import { testConnection } from "./database/connection.js";
+import routes from "./routes/index.js";
 
 
 config();
@@ -23,6 +24,8 @@ app.use(
         explorer: true
     })
 );
+
+app.use(routes)
 
 app.use((req, res) => {
     res.status(404).json({
